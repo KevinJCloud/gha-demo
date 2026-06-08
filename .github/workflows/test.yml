@@ -7,4 +7,5 @@ jobs:
       - run: |
          echo "Welcome to GHA"
          ls -l
-        
+         pwd 
+         echo "done"
