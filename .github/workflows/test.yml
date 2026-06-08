@@ -32,3 +32,10 @@ jobs:
           python --version
           node --version
           npm --version
+  
+  checking_git_push:
+     needs: checking_the-installed_pacakages
+     runs-on: ubuntu-latest
+     steps:
+       - name: git push
+         run: echo "git push is fine"
