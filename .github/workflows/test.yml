@@ -16,11 +16,13 @@ jobs:
            echo "done"
   test:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: my test job
         run: echo "test has been completed"
 
   checking_the-installed_pacakages:
+      needs: test
       runs-on: ubuntu-latest
       steps:
        - name: Check installed tools
