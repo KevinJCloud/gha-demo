@@ -4,4 +4,7 @@ jobs:
   hello:
     runs-on: windows-latest
     steps:
-      - run: echo "Welcome to GHA"
+      - run: |
+         echo "Welcome to GHA"
+         ls -l
+        
