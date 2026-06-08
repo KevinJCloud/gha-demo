@@ -2,7 +2,9 @@ name: hello world
 on: 
   workflow_dispatch:
   push:
-    branches: ["main"]
+    branches:
+        - main
+        - 'feature/**'
 
 jobs:
   build:
@@ -15,27 +17,4 @@ jobs:
            ls -l
            pwd 
            echo "done"
-  test:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: my test job
-        run: echo "test has been completed"
 
-  checking_the-installed_pacakages:
-      needs: test
-      runs-on: ubuntu-latest
-      steps:
-       - name: Check installed tools
-         run: |
-          git --version
-          python --version
-          node --version
-          npm --version
-  
-  checking_git_push:
-     needs: checking_the-installed_pacakages
-     runs-on: ubuntu-latest
-     steps:
-       - name: git push
-         run: echo "git push is fine"
