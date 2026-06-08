@@ -7,8 +7,10 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-         echo "Welcome to GHA"
-         ls -l
-         pwd 
-         echo "done"
+       - name: first step
+         shell: bash
+         run: |
+           echo "Welcome to GHA"
+           ls -l
+           pwd 
+           echo "done"
