@@ -20,7 +20,7 @@ jobs:
       - name: my test job
         run: echo "test has been completed"
 
-  checking the installed pacakages:
+  checking_the-installed_pacakages:
       runs-on: ubuntu-latest
       steps:
        - name: Check installed tools
