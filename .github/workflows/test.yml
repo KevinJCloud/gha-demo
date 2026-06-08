@@ -4,7 +4,7 @@ on:
   push:
 
 jobs:
-  hello:
+  build:
     runs-on: ubuntu-latest
     steps:
        - name: first step
@@ -14,3 +14,8 @@ jobs:
            ls -l
            pwd 
            echo "done"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my test job
+        run: echo "test has been completed"
