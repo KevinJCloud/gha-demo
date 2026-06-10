@@ -39,3 +39,15 @@ jobs:
      steps:
        - name: git push
          run: echo "git push is fine"
+
+  using_actions:
+      needs: checking_the-installed_pacakages
+      runs-on: ubuntu-latest
+      steps:
+        - name: running action in checkout
+          uses: actions/checkout@v6
+
+        - name: listing the files
+          run: ls -l
+        - name: view the file
+          run: cat index.html
