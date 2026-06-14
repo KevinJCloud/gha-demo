@@ -1,6 +1,6 @@
 name: working with env variables
 on: 
-  - push
+
   - workflow_dispatch
 
 env:
