@@ -12,3 +12,4 @@ jobs:
       - name: conetext variables
         run: |
           echo "Actor : ${{ github.actor }}"
+          echo "Action: ${{ github.action_path}}"
