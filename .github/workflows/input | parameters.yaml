@@ -11,12 +11,16 @@ on:
           - dev
           - staging
           - prod
+          
+     artifact_tag:
+      description: select the version
+      required: true
         
 jobs:
    input:
      runs-on: ubuntu-latest
      steps:
        - name: Deploy the app
-         run: echo "Deploying to ${{ inputs.environment }}"
+         run: echo "Deploying to ${{ inputs.environment }} and tag is ${{ inputs.artifact_tag }}"
    
   
