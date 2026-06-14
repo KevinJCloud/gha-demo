@@ -1,0 +1,21 @@
+name: working with input parmaters
+on: workflow_dispatch
+  inputs:
+     environment:
+        description: choose the env to deploy
+        required: true
+        default: dev
+        type: choice
+        options:
+          - dev
+          - staging
+          - prod
+        
+jobs:
+   input:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Deploy the app
+         run: echo "Deploying to {{ inputs.environment }}"
+   
+  
