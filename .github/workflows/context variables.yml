@@ -1,0 +1,14 @@
+name: conetext variables
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  context_variables:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: conetext variables
+        run: |
+          echo "Actor : ${{ github.actor }}"
