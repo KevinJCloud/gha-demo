@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: if demo eg
-        if: github.ref == "refs/heads/main"
+        if: github.ref == 'refs/heads/main'
         run: echo "running this step from main branch"
 
       - name: simple step
