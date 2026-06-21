@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
        - name: first step
-         if: github.ref == '/refs/heads/feature/pr_demo'
+         if: github.ref == 'refs/heads/feature/pr_demo'
          run: |
            echo "Welcome to GHA"
            ls -l
