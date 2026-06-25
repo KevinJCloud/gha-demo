@@ -1,0 +1,26 @@
+name: this workflow runs when the pr is raised the biild job will run and when code is pushed to main the deploy will run
+on:
+ pull_request:
+    types:
+       - opened
+       - synchronize
+
+ push:
+     branches:
+        - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+       - name: hi da lusu punda
+         run: echo "oombu"
+
+  deploy:
+     runs-on: ubuntu-latest
+     steps:
+        - name: poda sunni
+          run: echo " nee nakku"
+     
+ 
+
