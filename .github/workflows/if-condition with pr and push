@@ -1,0 +1,22 @@
+name: creating a pipeline when the pr is raised the pr job should run and when the code is merged to main the deploy job shoukd run
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+       - name: this is pr job
+         run: echo " build stage"
+
+ deploy:
+   runs-on: ubuntu-latest
+   steps:
+      - name: this is deploy job
+        run: echo "deploy stage"
+
+
+
